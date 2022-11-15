@@ -1,0 +1,156 @@
+<html>
+
+    <title>Professor Algorithm - Bubble Sort</title>
+    <link rel="icon" type="image/x-icon" href="../Assets/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../styles.css">
+
+<head>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <img class="navbar-logo" src="../Assets/logo.png" height="40" width="40"></img>
+        <a class="navbar-brand" href="#">Professor Algorithm</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Home<span class="sr-only">(current)</span></a>
+                </li>
+                
+                <li class="nav-item dropdown"> <!-- https://getbootstrap.com/docs/4.0/components/navbar/ -->
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Algorithms
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="../Algorithms/HeapSort.html">Heap Sort</a>
+                        <a class="dropdown-item active" href="../Algorithms/BubbleSort.html">Bubble Sort</a>
+                        <a class="dropdown-item" href="../Algorithms/InsertionSort.html">Insertion Sort</a>
+                        <a class="dropdown-item"  href="../Algorithms/MergeSort.html">Merge Sort</a>
+                        <a class="dropdown-item"  href="../Algorithms/SelectionSort.html">Selection Sort</a>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="../Resources.html">Resources</a>
+                </li>
+                
+            </ul>
+            
+        </div>
+    </nav>
+
+<div class="z_container header">
+    <div class="box_lower">
+
+        <br>
+        <h1 id="title" class="mb-3 absolute-centered">Bubble Sort</h1>
+        <br>
+
+    </div>
+
+    <!--<img onclick="toggleSidebar()" id="sidebar_btn" type="image" src="../Files/LeftArrow.png" class="sidebar_btn">-->
+    <img onclick="toggleSidebar()" id="sidebar_btn" type="image" src="../Files/AccessibilityLogo.png" class="sidebar_btn">
+
+    <!--<img src="../Files/AccessibilityLogo.png" class="sidebar_img" id="sidebar_img">-->
+
+    <div class="sidebar" id="sidebar">
+
+        <h4 class="static_colour_black">Accessibility Settings</h4>
+
+        <!-- Text Size -->
+        <button onclick="updateTextSize(-1, true, false)" type="button" class="btn btn-secondary">+</button>
+        <button onclick="updateTextSize(-1, false, true)" type="button" class="btn btn-secondary">-</button>
+        <input id="textsize" type="text" placeholder="Text Size">
+        <button onclick="setTextSize()">Submit</button>
+        <br><br>
+
+        <!-- Text Spacing -->
+            <button onclick="updateTextSpacing(-1, true, false)" type="button" class="btn btn-secondary">+</button>
+            <button onclick="updateTextSpacing(-1, false, true)" type="button" class="btn btn-secondary">-</button>
+            <input id="textspacing" type="text" placeholder="Text Spacing">
+            <button onclick="updateTextSpacing(1, false, false)">Submit</button>
+            <br><br>
+
+        <button type="button" onclick="updateDarkMode(true)" class="btn btn-primary">Toggle Dark Mode</button>
+        <br><br>
+        
+        <button type="button" onclick="updateFont(true)" class="btn btn-primary">Toggle Dyslexia-Friendly Font</button>
+
+    </div>
+
+</div>
+
+</head>
+
+<body>
+
+<span id="ruler"></span>
+
+<div class="element_box">
+
+    <div class="element_inner_right">
+        <h4><b>Description</b></h4>
+        <p>
+        Bubble sorts are known to be one of the most controversial algorithms due to its very basic and impractical nature.
+        <br><br>
+        Bubble sorts step through the input list by each element, comparing each element with the one before it, swapping the lower value. 
+        It continues to go through the list until each element is sorted from smallest to largest. In smaller scaled interpretations of the bubble sort algorithm,
+        the time complexity is one that doesn't mean too much. However, on a large scaled list of randomized elements (lets say 1000) the amount of iterations the 
+        bubble sort would need to take is exponential.
+
+        <b>For this reason, Bubble Sort is rarely used in practice.</b>
+        <br><br>
+        
+        Bubble Sorts are however a great learning tool to get familiar with the concept of much more complex algorithms, as the compare and swap functionality of the
+        algorithm is (more often than not) universally shared throughout each algorithm.
+        
+        <br><br>
+        <b>Functionality: </b> Bubble sort is a sorting algorithm that iterates through a given array and swaps two elements if the left one is bigger than the right one. Its time complexity is 
+        O(N^2) since, in the worst case scenario, it would iterate through the array N times while swapping elements at every iteration. 
+        <br><br>
+        <b>Advantages: </b> In a very small data set, where the compiling time isn't of concern, using this sorting technique won't cause many issues and is 
+        overall very simple to implement into one's program. Its beginner friendly nature and its long history of usage have given bubble sorts room to be improved upon.
+
+
+
+        </p><br>
+
+        <h4><b>Step-By-Step</b></h4>
+        <p>
+        1. Starting at index 0... <br>
+        2. If the current element is greater than the next element, swap the elements <br>
+        3. Increment index <br>
+        4. Repeat steps 2 through 3 until reaching the last element <br>
+        5. Repeat steps 1 through 4 until no swaps occur <br>
+        <br><br><br><br><br>
+        </p>
+    </div>
+
+    <div class="element_inner_left">
+        <h4>Input</h4>
+        <p>Enter an array of integers (comma-separated):</p>
+        <input id="result_input" type="text" placeholder="1,2,3,4,5">
+        <button id="run_algorithm">Submit</button>
+
+        <br><br>
+        <h4>Results</h4>
+        <p id="result_box"></p>
+    </div>
+
+</div>
+
+    <script src="../script.js"></script>
+    <script src="../Scripts/BubbleSort.js"></script>
+    <script src="../Scripts/Sort.js"></script>
+    <!-- https://getbootstrap.com/docs/4.0/getting-started/introduction/ -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+
+
+</html>

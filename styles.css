@@ -1,0 +1,286 @@
+:root {
+
+    --light-bg: #f5f5f5;
+    --dark-bg: #122c34;
+    --bg-colour: var(--light-bg);
+    --bg-colour-opposite: var(--dark-bg);
+    --header-bg-colour: var(--dark-bg);
+    --header-text-colour: var(--light-bg);
+    --text-colour: var(--light-bg);
+    --text-colour-opposite: var(--dark-bg);
+    --primary: #003587;
+    --secondary: #0086c2;
+
+    --text-size: 14px;
+    --text-spacing: 1px;
+    --icon-filter: brightness(120%); /* default is white */
+
+    --title-left-correct: 50%;
+
+    --font: "Cambria";
+ 
+
+}
+
+/* navbar modifictions */
+
+.navbar-nav {
+    
+    position: absolute;
+    z-index: 9;
+    padding: 0.5rem;
+
+}
+
+.navbar {
+
+    background-color: var(--bg-colour-opposite) !important;
+
+}
+
+.nav-link, .navbar-brand {
+
+    color: var(--text-colour-opposite) !important;
+
+}
+
+.navbar-logo {
+
+    margin-right: 1rem;
+
+}
+
+.nav-link:hover {
+
+    transition-duration: 0.5s;
+    
+}
+
+/* head and body */
+
+.header {
+
+    background-color: var(--bg-colour-opposite);
+    color: var(--text-colour-opposite);
+    height: 10rem;
+
+}
+
+.header-home {
+
+    background-color: var(--bg-colour-opposite);
+    color: var(--text-colour-opposite);
+    height: 20rem;
+
+}
+
+.header-box {
+
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+
+}
+
+.subheader-text {
+
+    font-size: 20px;
+    font-style: italic;
+
+}
+
+body {
+
+    background-color:  var(--bg-colour);
+    color: var(--text-colour);
+    font-size: var(--text-size);
+    letter-spacing: var(--text-spacing);
+    font-family: var(--font);
+
+}
+
+/* elements */
+
+#ruler { visibility: hidden; white-space: nowrap; } /* https://blog.mastykarz.nl/measuring-the-length-of-a-string-in-pixels-using-javascript/ */
+
+.info-box {
+
+    padding-left: 20rem;
+    padding-right: 20rem;
+    padding-top: 5rem;
+
+}
+
+.absolute-centered {
+
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, 0%); /* https://medium.com/front-end-weekly/absolute-centering-in-css-ea3a9d0ad72e#:~:text=Absolute%20Centering%20in%20CSS.%20If%20you%20want%20to,0%20auto%3B%20%28%20when%20working%20with%20block%20element%29. */
+
+}
+
+.z_container {
+
+    position: relative;
+    width: 100%;
+
+}
+
+.box_lower {
+
+    position: absolute; /* https://dev.to/lennythedev/css-gotcha-how-to-fill-page-with-a-div-270j */
+    left: var(--title-left-correct); /* https://thoughtbot.com/blog/positioning */
+    margin-left: -50px; /* https://thoughtbot.com/blog/positioning */
+    height: 7rem;
+
+}
+
+.navbar {
+
+    height: 8vh;
+
+}
+
+.page-wrap { 
+    width: 600px; 
+    margin: 15px auto; 
+    position: relative; 
+  }
+
+.sidebar {
+
+    width: 25rem;
+    right: 0;
+    position: fixed; /* https://dev.to/lennythedev/css-gotcha-how-to-fill-page-with-a-div-270j */
+    background-color: white;
+    padding: 1rem;
+    height: 92vh; /* https://dev.to/lennythedev/css-gotcha-how-to-fill-page-with-a-div-270j */
+    display: none; /* default to off */
+
+}
+
+.static_colour_black {
+
+    color: black !important;
+
+}
+
+.sidebar_btn {
+
+    float:right;
+    position: fixed;
+    right: 25rem;
+    height: 2rem;
+
+    margin-right: -24rem; /* default to off */
+    transform: rotate(0deg);
+
+    margin-top: 45vh;
+
+    filter: var(--icon-filter);
+
+}
+
+.sidebar_btn:hover {
+
+    filter: brightness(50%);
+    transition-duration: 0.25s;
+    transition-property: filter;
+
+}
+
+.sidebar_img {
+
+    float:right;
+    position: absolute;
+    right: 25rem;
+    height: 3rem;
+
+    margin-right: -23rem; /* default to off */
+
+    margin-top: 44vh;
+
+}
+
+.element_box {
+
+    padding: 1rem;
+
+}
+
+.element_inner_left {
+
+    width: 30%;
+    float: left;
+    padding: 2rem;
+
+}
+
+.element_inner_right {
+
+    width: 70%;
+    float: right;
+    padding: 50px 500px 30px 0;
+
+}
+
+/* buttons */
+
+.btn-primary {
+
+    background-color: var(--primary);
+    color: var(--light-bg);
+
+}
+
+.btn-secondary {
+
+    background-color: var(--secondary);
+    color: var(--light-bg);
+
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Dropdown button on hover & focus */
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {display:block;}

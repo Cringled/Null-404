@@ -1,0 +1,124 @@
+<html>
+
+    <title>Professor Algorithm - Home</title>
+    <link rel="icon" type="image/x-icon" href="Assets/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+<head>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <img class="navbar-logo" src="Assets/logo.png" height="40" width="40"></img>
+    <a class="navbar-brand" href="#">Professor Algorithm</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+            </li>
+            
+            <li class="nav-item dropdown"> <!-- https://getbootstrap.com/docs/4.0/components/navbar/ -->
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Algorithms
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="Algorithms/HeapSort.html">Heap Sort</a>
+                    <a class="dropdown-item" href="Algorithms/BubbleSort.html">Bubble Sort</a>
+                    <a class="dropdown-item" href="Algorithms/InsertionSort.html">Insertion Sort</a>
+                    <a class="dropdown-item" href="Algorithms/MergeSort.html">Merge Sort</a>
+                    <a class="dropdown-item" href="Algorithms/SelectionSort.html">Selection Sort</a>
+
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="Resources.html">Resources</a>
+            </li>
+            
+        </ul>
+        
+    </div>
+</nav>
+
+<div class="z_container header-home">
+    <div class="box_lower header-box">
+
+        <p class="absolute-centered text-center"> Welcome to </p>
+        <h1 id="title" class="absolute-centered text-center">Professor Algorithm</h1>
+        <p class="absolute-centered subheader-text">Learn how different sorting algorithms work, step-by-step, and test them yourself!</p>
+
+    </div>
+
+    <!--<img onclick="toggleSidebar()" id="sidebar_btn" type="image" src="Files/LeftArrow.png" class="sidebar_btn">-->
+    <img onclick="toggleSidebar()" id="sidebar_btn" type="image" src="Files/AccessibilityLogo.png" class="sidebar_btn">
+
+    <!--<img src="Files/AccessibilityLogo.png" class="sidebar_img" id="sidebar_img">-->
+
+    <div class="sidebar" id="sidebar">
+
+        <h4 class="static_colour_black">Accessibility Settings</h4>
+
+        <!-- Text Size -->
+            <button onclick="updateTextSize(-1, true, false)" type="button" class="btn btn-secondary">+</button>
+            <button onclick="updateTextSize(-1, false, true)" type="button" class="btn btn-secondary">-</button>
+            <input id="textsize" type="text" placeholder="Text Size">
+            <button onclick="setTextSize()">Submit</button>
+            <br><br>
+
+        <!-- Text Spacing -->
+            <button onclick="updateTextSpacing(-1, true, false)" type="button" class="btn btn-secondary">+</button>
+            <button onclick="updateTextSpacing(-1, false, true)" type="button" class="btn btn-secondary">-</button>
+            <input id="textspacing" type="text" placeholder="Text Spacing">
+            <button onclick="updateTextSpacing(1, false, false)">Submit</button>
+            <br><br>
+
+        <button type="button" onclick="updateDarkMode(true)" class="btn btn-primary">Toggle Dark Mode</button>
+        <br><br>
+        
+        <button type="button" onclick="updateFont(true)" class="btn btn-primary">Toggle Dyslexia-Friendly Font</button>
+        <br><br>
+
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+            <div id="myDropdown" class="dropdown-content">
+                <button type="button" onclick="updateFont(true)" class="btn btn-primary">Arial</button>
+                <button type="button" onclick="updateFont(true)" class="btn btn-primary">Comic Sans</button>
+                <button type="button" onclick="updateFont(true)" class="btn btn-primary">Helvetica</button>
+            </div>
+          </div>
+
+    </div>
+
+</div>
+
+</head>
+
+<body>
+
+<div class="element_box">
+
+<p class="info-box">
+    <b></b>
+
+    Choose from 5 different sorting algorithms to learn about. Each sorting algorithm's information includes a brief description. When you run a test, the steps
+    of how it works, its runtime complexity, and the specific steps it takes to sort an array. In addition, you can test the algorithm by inputting an array of
+    integers into the provided input box. The steps the algorithm took display next to each pass.
+
+    <br> <br>
+    To get started, choose an algorithm from the navbar's Algorithms dropdown.
+</p>
+
+</div>
+
+    <script src="script.js"></script>
+    <!-- https://getbootstrap.com/docs/4.0/getting-started/introduction/ -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
