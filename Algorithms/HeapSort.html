@@ -77,7 +77,17 @@
         <button type="button" onclick="updateDarkMode(true)" class="btn btn-primary">Toggle Dark Mode</button>
         <br><br>
         
-        <button type="button" onclick="updateFont(true)" class="btn btn-primary">Toggle Dyslexia-Friendly Font</button>
+        <!--<button type="button" onclick="updateFont(true)" class="btn btn-primary">Toggle Dyslexia-Friendly Font</button>-->
+
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Fonts</button>
+            <div id="myDropdown" class="dropdown-content">
+                <button type="button" onclick="updateFont(true)" class="btn btn-primary">Arial</button>
+                <button type="button" onclick="updateFont(true)" class="btn btn-primary">Cambria</button>
+                <!--<button type="button" onclick="updateFont(true)" class="btn btn-primary">Comic Sans</button>
+                <button type="button" onclick="updateFont(true)" class="btn btn-primary">Helvetica</button>-->
+            </div>
+          </div>
 
     </div>
 
@@ -104,14 +114,17 @@
         Similarities coincide with selection sort where the first minimum elements will be placed at the beginning of the sorted lists. 
         Heapsorts are unstable sorting algorithms, due to the operations being able to change the order of equivalent keys in an array. 
         This array-based heap can be used to help reduce storage and memory by overwriting inputs using no extra data structures at runtime.
+        
         </p>
         <b>Heapify: </b> is the process of creating heap data structures from binary trees using arrays to create min-heap and max-heap array based structures.
         This is primarily used in implemenation of the code to keep track of its largest function seperately from the sorting function of the algorithm.
-        </p>
-        <b>Functionality:</b>
         Heapsorts are built in a “Parent-Child” architecture in which the uppermost nodes are called the “parents” and their roots are labeled as their children. 
 
-        The start process of a heapsort is to create itself into a “max heap”, where the value of parent nodes is greater than or equal to the values of its children. 
+        The start process of a heapsort is to create itself into a “max heap”, where the value of parent nodes is greater than or equal to the values of its children.
+        </p>
+        <b>Functionality:</b> Heap Sorts worst case performance is O(n log n), with its best being O(n log n) <b>OR</b> O(n). The difference between the O(n log n) and O(n)
+        is the difference in keys the heap sort would need to parse through each iteration.
+        
 
         </p>
         <b>Advantages: </b>  

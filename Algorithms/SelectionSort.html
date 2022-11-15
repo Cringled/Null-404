@@ -78,7 +78,17 @@
         <button type="button" onclick="updateDarkMode(true)" class="btn btn-primary">Toggle Dark Mode</button>
         <br><br>
 
-        <button type="button" onclick="updateFont(true)" class="btn btn-primary">Toggle Dyslexia-Friendly Font</button>
+        <!--<button type="button" onclick="updateFont(true)" class="btn btn-primary">Toggle Dyslexia-Friendly Font</button>-->
+
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Fonts</button>
+            <div id="myDropdown" class="dropdown-content">
+                <button type="button" onclick="updateFont(true)" class="btn btn-primary">Arial</button>
+                <button type="button" onclick="updateFont(true)" class="btn btn-primary">Cambria</button>
+                <!--<button type="button" onclick="updateFont(true)" class="btn btn-primary">Comic Sans</button>
+                <button type="button" onclick="updateFont(true)" class="btn btn-primary">Helvetica</button>-->
+            </div>
+          </div>
 
 
     </div>
@@ -94,13 +104,25 @@
 <div class="element_box">
 
     <div class="element_inner_right">
-        <h4>Description</h4>
+        <h4><b>Description</b></h4>
         <p>
-        Bubble sort is a sorting algorithm that iterates through a given array and swaps two elements if the left one is bigger than the right one. Its time complexity is 
-        O(n^2) since, in the worst case scenario, it would iterate through the array n times while swapping elements at every iteration. 
+        Selection sort is an "in place comparison" algorithm, meaning that with the first item scanned within a list, it will determine if it's the largest or smallest,
+        which it will then swap itself with the smallest if found. It creates a sublist of data, sorted being pushed to the left and the unsorted on its right side. 
+        <br><br>
+        It is debated if selection sort is more or less efficient than insertion sort due to the similar structure of both algorithms, in most cases however selection sort does
+        perform <b>worse</b> in those regards.
+
+        The time complexity of selection sort is completely dependent on if the list is already sorted and how many elements are inside the list. Selection sort does not
+        find its best performance in longer lists, and other algorithms should be considered if the list is larger than 100 elements.
+
+        <br><br>
+        <b>Functionality: </b> Worst (and best) case performance is O(n^2).
+        <br><br>
+        <b>Advantages: </b> Working in already sorted / semi sorted lists have selection sort working in its best environment, where data would need to be regularly input
+        and sorted consistently. Receiving large amounts of data at once may not be the best choice for selection sort, but gradual updates in a list give it opportunity to shine.
         </p><br>
 
-        <h4>Step-By-Step</h4>
+        <h4><b>Step-By-Step</b></h4>
         <p>
         1. Starting at index 0... <br>
         2. If the current element is greater than the next element, swap the elements <br>

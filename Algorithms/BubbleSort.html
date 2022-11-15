@@ -77,7 +77,17 @@
         <button type="button" onclick="updateDarkMode(true)" class="btn btn-primary">Toggle Dark Mode</button>
         <br><br>
         
-        <button type="button" onclick="updateFont(true)" class="btn btn-primary">Toggle Dyslexia-Friendly Font</button>
+       <!--<button type="button" onclick="updateFont(true)" class="btn btn-primary">Toggle Dyslexia-Friendly Font</button>-->
+
+       <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Fonts</button>
+        <div id="myDropdown" class="dropdown-content">
+            <button type="button" onclick="updateFont(true)" class="btn btn-primary">Arial</button>
+            <button type="button" onclick="updateFont(true)" class="btn btn-primary">Cambria</button>
+            <!--<button type="button" onclick="updateFont(true)" class="btn btn-primary">Comic Sans</button>
+            <button type="button" onclick="updateFont(true)" class="btn btn-primary">Helvetica</button>-->
+        </div>
+      </div>
 
     </div>
 
@@ -113,6 +123,7 @@
         <br><br>
         <b>Advantages: </b> In a very small data set, where the compiling time isn't of concern, using this sorting technique won't cause many issues and is 
         overall very simple to implement into one's program. Its beginner friendly nature and its long history of usage have given bubble sorts room to be improved upon.
+        In already sorted (or close to sorted) lists of information, bubble sort would be able to quickly parse through, make appropriate changes, and complete the sort in good time.
 
 
 

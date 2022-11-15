@@ -77,8 +77,17 @@
         <button type="button" onclick="updateDarkMode(true)" class="btn btn-primary">Toggle Dark Mode</button>
         <br><br>
         
-        <button type="button" onclick="updateFont(true)" class="btn btn-primary">Toggle Dyslexia-Friendly Font</button>
+        <!--<button type="button" onclick="updateFont(true)" class="btn btn-primary">Toggle Dyslexia-Friendly Font</button>-->
 
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Fonts</button>
+            <div id="myDropdown" class="dropdown-content">
+                <button type="button" onclick="updateFont(true)" class="btn btn-primary">Arial</button>
+                <button type="button" onclick="updateFont(true)" class="btn btn-primary">Cambria</button>
+                <!--<button type="button" onclick="updateFont(true)" class="btn btn-primary">Comic Sans</button>
+                <button type="button" onclick="updateFont(true)" class="btn btn-primary">Helvetica</button>-->
+            </div>
+          </div>
     </div>
 
 </div>
@@ -92,18 +101,38 @@
 <div class="element_box">
 
     <div class="element_inner_right">
-        <h4>Description</h4>
+        <h4><b>Description</b></h4>
         <p>
+        Merge sort is a comparison based sorting algorithm that divides the current list into seperate arrays, swapping each element within the smaller arrays.
+        It will then feed those elements into a "pool" of all the other swapped arrays, combining its info and continuing to swap from there. It does this until 
+        the list is fully sorted. 
+        <br>
+        There are multiple different styles in how merge sort can work, but the most two common ways are "Top Down", and "Bottom Up". 
+        <br><br> 
+        Top down works by creating the two seperate arrays and when the sub arrays are equal to "1", they merge together to produce the sorted list.
+        <br><br>
+        Bottom up creates sub arrays with one element inside, which then compares itself with elements of 2 afterwards, it does this until it builds itself back into 
+        its original length and the list would be sorted.
+
+        <br><br>
+        <b>Functionality</b>
         Merge sort is a recursive sorting algorithm that divides the given array into left and right arrays. It sorts each
         part of the array (left and right) before merging them. When merging, it compares the size of each side to created
-        a sorted merged array. The runtime complexity is O(N log(N)).
+        a sorted merged array. The runtime complexity is O(N log(N)) in its worst case, with its best case being Ω(n).
+        <br><br>
+
+        <b>Advantages</b>
+        With its divide and conquer structure, parsing through large lists has never been easier. Merge sorts provide a solid and effective execution in how it handles larger lists, and is 
+        commonly relied upon (and sought to improve upon) by most computer scientists.
+
         </p><br>
 
-        <h4>Step-By-Step</h4>
+        <h4><b>Step-By-Step</b></h4>
         <p>
         1. Split array into left and right <br>
         2. If size of left or right is less than or equal to 1, merge and sort <br>
         3. Else, recursive call for left and right arrays <br>
+        <br><br><br><br><br>
         </p>
     </div>
 

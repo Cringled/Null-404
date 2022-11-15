@@ -77,7 +77,17 @@
         <button type="button" onclick="updateDarkMode(true)" class="btn btn-primary">Toggle Dark Mode</button>
         <br><br>
         
-        <button type="button" onclick="updateFont(true)" class="btn btn-primary">Toggle Dyslexia-Friendly Font</button>
+        <!--<button type="button" onclick="updateFont(true)" class="btn btn-primary">Toggle Dyslexia-Friendly Font</button>-->
+
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Fonts</button>
+            <div id="myDropdown" class="dropdown-content">
+                <button type="button" onclick="updateFont(true)" class="btn btn-primary">Arial</button>
+                <button type="button" onclick="updateFont(true)" class="btn btn-primary">Cambria</button>
+                <!--<button type="button" onclick="updateFont(true)" class="btn btn-primary">Comic Sans</button>
+                <button type="button" onclick="updateFont(true)" class="btn btn-primary">Helvetica</button>-->
+            </div>
+          </div>
 
     </div>
 
@@ -92,22 +102,40 @@
 <div class="element_box">
 
     <div class="element_inner_right">
-        <h4>Description</h4>
+        <h4><b>Description</b></h4>
         <p>
+        Insertion sort is a simple sorting algorithm that creates the sorted list one element at a time until the list is completely sorted. 
+        This is done through two arrays, one array that takes the current "unswapped" element and then compares that element with the current sorted list. 
+        <br><br>
+        An easy way to get familiar with the concept of insertion sort is how you would sort something by hand, you'd pull the info, then place it where it would be best fit.
+        <br>
+
         Insertion sort is similar to bubble sort in that it iterates through a given array, swapping elements if the previous is greater
         than the next. However, after swapping an element, it backtracks and continues swapping until the element is in the correct place
         relative to index 0 to the current index. 
+
+
         <br><br>
-        <b>Functionality: </b>Its runtime complexity is O(N^2).
+        <b>Functionality: </b>
+        Its runtime complexity is O(N^2) in its worst case, its best case can be O(n) or O(1) if the array is already sorted.   
         </p><br>
 
-        <h4>Step-By-Step</h4>
+        <b>Advantages: </b> 
+        The implemenation
+        of this algorithm is very simple, making it easy to implement into a list and also easy for beginner level programmers to get the hang of much more complex algorithms due 
+        to the structure of this one specifically. With already sorted / semi sorted lists, insertion sort 
+        can quickly parse through the list and swap the elements out of position back to their designated spots, which can benefit users who are needing to continuiously input data.
+        </p><br>
+
+        <h4><b>Step-By-Step</b></h4>
         <p>
         1. Compare i and i + 1 <br>
         2. Swap if i + 1 is greater than i <br>
         3. Move index down 1 <br>
         4. Repeat steps 1 through 3 until index 0 to original position is sorted <br>
         5. Repeat steps 1 through 4 until the end of the array is reached <br>
+        <br><br><br><br><br>
+        
         </p>
     </div>
 
